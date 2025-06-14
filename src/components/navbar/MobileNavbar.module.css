@@ -1,0 +1,206 @@
+.mobileNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.2rem 0.7rem 1.2rem;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+}
+
+.logo {
+  height: 32px;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 3.5px;
+  background: #232323;
+  border-radius: 2px;
+}
+
+.menuOverlay {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.2rem 0.7rem 1.2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #232323;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.menuContent {
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.menuBox {
+  background: #fafbfc;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.menuRow {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.menuRow a {
+  color: #3b82f6;
+  font-size: 0.98rem;
+  font-weight: 400;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #eee;
+  color: #232323;
+  font-size: 1.05rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menuLink:last-child {
+  border-bottom: none;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logoImg {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  background: #fff;
+}
+
+.navTitle {
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: #232323;
+  letter-spacing: -0.5px;
+}
+
+/* Only show on mobile */
+@media (min-width: 601px) {
+  .mobileNav, .menuOverlay {
+    display: none !important;
+  }
+}
+
+/* iPhone 14 Pro Max specific adjustments */
+@media (max-width: 430px) {
+  .mobileNav, .menuHeader {
+    padding: 1rem 0.7rem 0.7rem 0.7rem;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .menuContent {
+    padding: 0.7rem 0.7rem;
+    gap: 0.5rem;
+  }
+
+  .menuBox {
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 0.7rem;
+    gap: 0.5rem;
+  }
+
+  .menuRow {
+    font-size: 0.97rem;
+    gap: 0.7rem;
+  }
+
+  .menuRow a {
+    font-size: 0.95rem;
+    margin-left: 0.3rem;
+  }
+
+  .menuLink {
+    font-size: 1rem;
+    padding: 0.7rem 0;
+  }
+}
+
+.imageColumns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.imageColumn img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
